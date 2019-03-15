@@ -47,6 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	} else {
 		$errors[] = 'You forgot to enter your password.';
 	}
+	// Start of SUCCESFUL SECTION i.e. all entries were correct
 	if (empty($errors)) { // If everything's OK.
 	// Register the user in the database...
 		require ('./mysqli_connect.php'); // Connect to the db.
@@ -56,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if ($result) { // If it ran OK.
 		header ("location: register-thanks.php"); 
 		exit();
+		//end of SUCCESFUL SECTION
 		// Print a message:
 		//echo '<h2>Thank you!</h2>
 		//<p>You are now registered. In Chapter 12 you will actually be able to log in!</p><p><br></p>';	
